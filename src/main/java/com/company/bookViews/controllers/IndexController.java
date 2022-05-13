@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class IndexController {
     @GetMapping
-    @ResponseBody
-    public String getIndex() { return "GET /"; }
+    public String getIndex() {
+        return "index"; }
 }

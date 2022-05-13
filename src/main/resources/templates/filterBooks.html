@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thmyeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtered Books!</title>
+</head>
+<body>
+<h3>Matching Books: </h3>
+<h4 th:unless="${books.size() != 0}">No matches found</h4>
+
+<th:block th:each="book : ${books}">
+    <h4 th:text="${book.get('title')}"></h4>
+    <ul>
+        <li th:text="${book.get('author')}"></li>
+        <li th:text="${book.get('ISBN')}"></li>
+    </ul>
+</th:block>
+
+<a href="/book">Book List</a>
+<a href="/book/new">Add New Book</a>
+<a href="/">Back to Index Menu</a>
+</body>
+</html>

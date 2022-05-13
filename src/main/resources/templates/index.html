@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Tracking</title>
+    <!-- We use the th:replace here to tell Thymeleaf where to insert the fragment that we've named menu-fragment  -->
+    <!--  th:replace = file name :: fragment name  -->
+    <div th:replace="fragments/menu-fragment :: menu-fragment"></div>
+</head>
+<body>
+<p>This is just static HTML.</p>
+<h2>Header Tag</h2>
+<ul>
+    <li>bullet point 1</li>
+    <li>bullet point 2</li>
+</ul>
+<p>Just plain old HTML. Nothing special going on here.</p>
+<p>We still have to mark this file as <b>xmlns:th="http://www.thymeleaf.org"</b> because the Thymeleaf engine is still building this HTML file for us.
+    The only thing that is being added to this file is our fragment, but even if it didn't have that it still needs to be built. And that's one of
+    Thymeleaf's responsibilities.</p>
+<a href="/">Back to Index Menu</a>
+</body>
+</html>

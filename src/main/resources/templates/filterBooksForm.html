@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Book!</title>
+</head>
+<body>
+<form th:action="@{/book/search}" method='POST'>
+    <label>Search:
+    <label>Title <input type='radio' name='type' value="title"></label><br />
+    <label>Author <input type='radio' name='type' value="author"></label><br />
+    <input type='text' name='keyword'><br />
+    <input type='submit'>
+    </label>
+</form>
+
+<a href="/book">Book List</a>
+<a href="/book/search">Search Books</a>
+<a href="/">Back to Index Menu</a>
+</body>
+</html>
